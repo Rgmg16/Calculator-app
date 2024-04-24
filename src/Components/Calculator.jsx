@@ -13,8 +13,11 @@ const Calculator = () => {
         setInput('Error');
       }
     } else if (value === 'C') {
-        setInput(input.slice(0, -1));
-      
+      setInput(input.slice(0, -1));
+
+    }
+    else if (value === 'AC') {
+      setInput('')
     } else {
       setInput(input + value);
     }
@@ -43,8 +46,11 @@ const Calculator = () => {
         <Button label="*" onClick={handleClick} />
         <Button label="C" onClick={handleClick} />
         <Button label="0" onClick={handleClick} />
-        <Button label="=" onClick={handleClick} />
+        <Button label="AC" onClick={handleClick}/>
         <Button label="/" onClick={handleClick} />
+        <Button label="=" onClick={handleClick} />
+
+
       </div>
     </div>
   );
